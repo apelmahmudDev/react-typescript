@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 interface IProps {
 	name: string;
@@ -6,10 +6,21 @@ interface IProps {
 }
 
 const Contact = ({ name, email = "N/A" }: IProps) => {
-	// (props: IProps)
 	return (
 		<div className="card">
-			<h1>🦸 Contact</h1>
+			<p>
+				<strong>Name: </strong> {name}
+			</p>
+			<p>
+				<strong>email: </strong> {email}
+			</p>
+		</div>
+	);
+};
+
+export const ContactDemo: React.FC<IProps> = ({ name, email = "N/A" }) => {
+	return (
+		<div className="card">
 			<p>
 				<strong>Name: </strong> {name}
 			</p>
