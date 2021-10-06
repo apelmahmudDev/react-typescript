@@ -6,7 +6,19 @@ interface IUser {
 }
 
 const User = ({ name, phone }: IUser) => {
-	return <div></div>;
+	return (
+		<div>
+			<p>
+				<strong>Name: </strong>
+				{name}
+			</p>
+			<br />
+			<p>
+				<strong>Phone: </strong>
+				{phone}
+			</p>
+		</div>
+	);
 };
 
 export default User;
